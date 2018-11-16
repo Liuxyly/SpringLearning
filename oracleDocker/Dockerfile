@@ -9,6 +9,8 @@ ENV USE_UTF8_IF_CHARSET_EMPTY true
 
 ADD entrypoint.sh /entrypoint.sh
 
+RUN chmod +x /entrypoint.sh
+
 RUN apt-get update && apt-get -y install curl && apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* 
 
 EXPOSE 1521
